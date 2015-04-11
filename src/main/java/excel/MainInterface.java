@@ -92,7 +92,7 @@ out.println(Globals.file.getName()+" has "+(Globals.file.length()/1024/1024)+" M
 				inpLocal = new FileInputStream(Globals.file);
 				
 					Globals.excel = new ExcelManager(Globals.ext, inpLocal);
-					System.out.println("set columns-  "
+					System.out.println("set columns -  "
 							+ Globals.excel.getLastColumnNum());
 					// добавить нужное количество
 					// столбцов-localModel.getColumnCount()
@@ -119,7 +119,7 @@ out.println(Globals.file.getName()+" has "+(Globals.file.length()/1024/1024)+" M
 							// System.out.println("excel.getLastColumnNum() "+excel.getLastColumnNum());
 							localModel.setValueAt(Globals.excel.getValueAtCell(
 									rowNum + 1, cellNum), rowNum, cellNum + 1);
-
+							
 						}
 					}
 				
