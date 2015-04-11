@@ -92,7 +92,10 @@ out.println(Globals.file.getName()+" has "+(Globals.file.length()/1024/1024)+" M
 				inpLocal = new FileInputStream(Globals.file);
 				
 					Globals.excel = new ExcelManager(Globals.ext, inpLocal);
-					System.out.println("set columns -////  "
+
+
+					System.out.println("set columns "
+
 							+ Globals.excel.getLastColumnNum());
 					// добавить нужное количество
 					// столбцов-localModel.getColumnCount()
