@@ -3,6 +3,7 @@ package excel;
 import java.io.File;
 
 import javax.swing.JFileChooser;
+import javax.swing.table.DefaultTableModel;
 
 public class Globals {
 	protected static Object[][] tableData;
@@ -15,4 +16,5 @@ public class Globals {
 	protected static  String ext;//расширение файла
 	 protected static JFileChooser fileChooser;
 	 protected static File file;
+	 protected static DefaultTableModel localModel;
 }
