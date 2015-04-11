@@ -126,7 +126,7 @@ out.println(Globals.file.getName()+" has "+(Globals.file.length()/1024/1024)+" M
 			} catch (IOException ex) {
 
 				ex.printStackTrace();
-				System.out.println("otp000000s");
+			
 
 			}
 
