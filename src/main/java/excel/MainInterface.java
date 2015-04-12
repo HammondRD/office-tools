@@ -168,7 +168,7 @@ class MainInterfaceFrame extends JFrame {
 
 }
 /**
- * Хочу видеть этот текст только в ветке разработки
+ *
  * @author Aleks
  *
  */
