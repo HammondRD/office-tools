@@ -38,7 +38,7 @@ public class MainInterface {
 	 * invoked from the event-dispatching thread.
 	 */
 	public MainInterface() {
-//ka;lfja;kfja;fj;afj
+
 	}
 
 	public static void createAndShowGUI() {
@@ -48,7 +48,7 @@ public class MainInterface {
 	}
 
 	/**
-	 * Launch the application. //////
+	 * Launch the application.
 	 */
 
 	public static void main(String[] args) {
@@ -112,8 +112,7 @@ out.println(Globals.file.getName()+" has "+(Globals.file.length()/1024/1024)+" M
 
 						localModel.addRow(new Object[] {});
 						localModel.setValueAt(i + 1, i, 0);
-						// localModel.setValueAt(excel.getValueAtCell(i+1,
-						// 2),i,1);
+						
 					}
 					// записать данные в таблицу
 					for (int rowNum = 0; rowNum < Globals.excel.getLastRowNum(); rowNum++) {
