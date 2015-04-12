@@ -167,7 +167,11 @@ class MainInterfaceFrame extends JFrame {
 	}
 
 }
-
+/**
+ * Хочу видеть этот текст только в ветке разработки
+ * @author user
+ *
+ */
 class MainInterfacePanel extends JPanel {
 	public MainInterfacePanel() {
 		setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -180,15 +184,10 @@ class MainInterfacePanel extends JPanel {
 				Double.MIN_VALUE };
 
 		setLayout(gridBagLayout);
-		// ---------------------------------------------
-		// setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
-		// ------------------
-
+		
 		JButton btnNewButton = new JButton(Strings.BTN_OPEN_FILE);
 		GridBagConstraints gbc = new GridBagConstraints();
-		// add(btnNewButton, gbc_btnNewButton);
-		//ll
-		//ooo
+
 		gbc.insets = new Insets(0, 0, 0, 5);
 		gbc.gridx = 0;
 		gbc.gridy = 0;
