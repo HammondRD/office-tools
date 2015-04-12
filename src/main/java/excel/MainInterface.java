@@ -38,7 +38,7 @@ public class MainInterface {
 	 * invoked from the event-dispatching thread.
 	 */
 	public MainInterface() {
-//ka;lfja;kfja;fj;afj
+
 	}
 
 	public static void createAndShowGUI() {
@@ -92,7 +92,10 @@ out.println(Globals.file.getName()+" has "+(Globals.file.length()/1024/1024)+" M
 				inpLocal = new FileInputStream(Globals.file);
 				
 					Globals.excel = new ExcelManager(Globals.ext, inpLocal);
-					System.out.println("set columns------------  "
+
+
+					System.out.println("set columns "
+
 							+ Globals.excel.getLastColumnNum());
 					// добавить нужное количество
 					// столбцов-localModel.getColumnCount()
@@ -109,8 +112,7 @@ out.println(Globals.file.getName()+" has "+(Globals.file.length()/1024/1024)+" M
 
 						localModel.addRow(new Object[] {});
 						localModel.setValueAt(i + 1, i, 0);
-						// localModel.setValueAt(excel.getValueAtCell(i+1,
-						// 2),i,1);
+						
 					}
 					// записать данные в таблицу
 					for (int rowNum = 0; rowNum < Globals.excel.getLastRowNum(); rowNum++) {
@@ -119,7 +121,7 @@ out.println(Globals.file.getName()+" has "+(Globals.file.length()/1024/1024)+" M
 							// System.out.println("excel.getLastColumnNum() "+excel.getLastColumnNum());
 							localModel.setValueAt(Globals.excel.getValueAtCell(
 									rowNum + 1, cellNum), rowNum, cellNum + 1);
-
+							
 						}
 					}
 				
