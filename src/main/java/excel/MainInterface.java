@@ -107,7 +107,7 @@ out.println(Globals.file.getName()+" has "+(Globals.file.length()/1024/1024)+" M
 					}
 					System.out.println(Globals.excel.getLastRowNum());
 					// установить нужное количество строчек
-					//
+					
 					for (int i = 0; i < Globals.excel.getLastRowNum(); i++) {
 
 						localModel.addRow(new Object[] {});
