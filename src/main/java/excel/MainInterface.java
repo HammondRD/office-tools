@@ -48,7 +48,7 @@ public class MainInterface {
 	}
 
 	/**
-	 * Launch the application.
+	 * Launch the application. //////
 	 */
 
 	public static void main(String[] args) {
