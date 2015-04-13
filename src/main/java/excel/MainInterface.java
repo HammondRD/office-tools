@@ -181,7 +181,7 @@ class MainInterfacePanel extends JPanel {
 		gridBagLayout.columnWeights = new double[] { 0.0, 1.0, Double.MIN_VALUE };
 		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0,
 				Double.MIN_VALUE };
-
+		
 		setLayout(gridBagLayout);
 		
 		JButton btnNewButton = new JButton(Strings.BTN_OPEN_FILE);
@@ -228,12 +228,11 @@ class MainInterfacePanel extends JPanel {
 		});
 		JButton writeToExcelBtn = new JButton(Strings.BTN_WRITE_TO_EXCEL);
 		
-		// add(btnNewButton, gbc_btnNewButton);
-	//gbcbarCodeField.insets = new Insets(0, 0, 0, 5);
+
 		GridBagConstraints writeToExcelBtnGbc = new GridBagConstraints();
 		writeToExcelBtnGbc.insets = new Insets(5, 5, 5, 5);
 		writeToExcelBtnGbc.gridx = 0;
-		writeToExcelBtnGbc.gridy = 2;
+		writeToExcelBtnGbc.gridy = 3;
 		writeToExcelBtnGbc.gridheight = 1;
 		add(writeToExcelBtn, writeToExcelBtnGbc);
 		
@@ -289,11 +288,13 @@ class MainInterfacePanel extends JPanel {
 		model = (DefaultTableModel) table.getModel();
 		model.addColumn("No");
 
-		// ---------------------------------------
+	
 
 	}
 
-	
+	public void setComponent(){
+		
+	}
 	protected static Integer length;
 	protected static JTable table;
 
