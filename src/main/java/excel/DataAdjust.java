@@ -22,7 +22,7 @@ public class DataAdjust {
 		String pic3 = Globals.excel.getValueAtCell(rowNum, cellNum - 3).trim();
 		String artNum = Globals.excel.getValueAtCell(rowNum, cellNum - 12)
 				.trim();
-		// inpLocal = new FileInputStream(Globals.file);
+
 
 	
 			if (price.length() != 0) {
