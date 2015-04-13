@@ -98,7 +98,7 @@ out.println(Globals.file.getName()+" has "+(Globals.file.length()/1024/1024)+" M
 
 							+ Globals.excel.getLastColumnNum());
 					// добавить нужное количество
-					// столбцов-localModel.getColumnCount()
+		
 
 					for (int y = 0; y < (Globals.excel.getLastColumnNum()); y++) {
 						localModel
@@ -162,7 +162,6 @@ class MainInterfaceFrame extends JFrame {
 		setVisible(true);
 		add(panel);
 
-		// setBounds(100, 100, 820, 523);
 		pack();
 	}
 
@@ -178,7 +177,7 @@ class MainInterfacePanel extends JPanel {
 
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 1, 0 };
-		gridBagLayout.rowHeights = new int[] { 1, 0, 0, 0 };
+		gridBagLayout.rowHeights = new int[] { 1, 1, 1, 1,1 };
 		gridBagLayout.columnWeights = new double[] { 0.0, 1.0, Double.MIN_VALUE };
 		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0,
 				Double.MIN_VALUE };
@@ -237,8 +236,20 @@ class MainInterfacePanel extends JPanel {
 		writeToExcelBtnGbc.gridy = 2;
 		writeToExcelBtnGbc.gridheight = 1;
 		add(writeToExcelBtn, writeToExcelBtnGbc);
-		writeToExcelBtn.addActionListener(new ActionListener(){
+		
+		
+		JButton exportExcelBtn = new JButton(Strings.BTN_OPEN_FILE);
+		GridBagConstraints exportExcelBtnGbc = new GridBagConstraints();
 
+		exportExcelBtnGbc.insets = new Insets(0, 0, 0, 5);
+		exportExcelBtnGbc.gridx = 0;
+		exportExcelBtnGbc.gridy = 3;
+		add(exportExcelBtn, exportExcelBtnGbc);
+		
+		
+		writeToExcelBtn.addActionListener(new ActionListener(){
+			
+			
 			
 			public void actionPerformed(ActionEvent event) {
 				if(!barCodeField.getText().isEmpty()){
@@ -250,6 +261,7 @@ class MainInterfacePanel extends JPanel {
 			}
 			
 		});
+		
 		
 		barCodeField.getDocument().addDocumentListener(new DocumentListener() {
 			
