@@ -238,10 +238,10 @@ class MainInterfacePanel extends JPanel {
 		add(writeToExcelBtn, writeToExcelBtnGbc);
 		
 		
-		JButton exportExcelBtn = new JButton(Strings.BTN_OPEN_FILE);
+		JButton exportExcelBtn = new JButton(Strings.BTN_CREATE_CSV);
 		GridBagConstraints exportExcelBtnGbc = new GridBagConstraints();
 
-		exportExcelBtnGbc.insets = new Insets(0, 0, 0, 5);
+		exportExcelBtnGbc.insets = new Insets(5, 5, 5, 5);
 		exportExcelBtnGbc.gridx = 0;
 		exportExcelBtnGbc.gridy = 3;
 		add(exportExcelBtn, exportExcelBtnGbc);
