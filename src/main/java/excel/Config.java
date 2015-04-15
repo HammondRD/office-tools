@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Properties;
 
-public class LoadConfig {
+public class Config {
     
 	public static void main(String[] args) {
 		FileInputStream fileProp;

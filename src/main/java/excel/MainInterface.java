@@ -107,7 +107,7 @@ out.println(Globals.file.getName()+" has "+(Globals.file.length()/1024/1024)+" M
 					}
 					System.out.println(Globals.excel.getLastRowNum());
 					// установить нужное количество строчек
-					//
+					
 					for (int i = 0; i < Globals.excel.getLastRowNum(); i++) {
 
 						localModel.addRow(new Object[] {});
@@ -167,7 +167,7 @@ class MainInterfaceFrame extends JFrame {
 
 }
 /**
- * Хочу видеть этот текст только в ветке разработки
+ *
  * @author Aleks
  *
  */
@@ -181,7 +181,7 @@ class MainInterfacePanel extends JPanel {
 		gridBagLayout.columnWeights = new double[] { 0.0, 1.0, Double.MIN_VALUE };
 		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0,
 				Double.MIN_VALUE };
-
+		
 		setLayout(gridBagLayout);
 		
 		JButton btnNewButton = new JButton(Strings.BTN_OPEN_FILE);
@@ -228,16 +228,16 @@ class MainInterfacePanel extends JPanel {
 		});
 		JButton writeToExcelBtn = new JButton(Strings.BTN_WRITE_TO_EXCEL);
 		
-		// add(btnNewButton, gbc_btnNewButton);
-	//gbcbarCodeField.insets = new Insets(0, 0, 0, 5);
+
 		GridBagConstraints writeToExcelBtnGbc = new GridBagConstraints();
 		writeToExcelBtnGbc.insets = new Insets(5, 5, 5, 5);
 		writeToExcelBtnGbc.gridx = 0;
-		writeToExcelBtnGbc.gridy = 2;
+		writeToExcelBtnGbc.gridy = 3;
 		writeToExcelBtnGbc.gridheight = 1;
 		add(writeToExcelBtn, writeToExcelBtnGbc);
 		
 		
+
 		JButton exportExcelBtn = new JButton(Strings.BTN_CREATE_CSV);
 		GridBagConstraints exportExcelBtnGbc = new GridBagConstraints();
 
@@ -245,6 +245,7 @@ class MainInterfacePanel extends JPanel {
 		exportExcelBtnGbc.gridx = 0;
 		exportExcelBtnGbc.gridy = 3;
 		add(exportExcelBtn, exportExcelBtnGbc);
+
 		
 		
 		writeToExcelBtn.addActionListener(new ActionListener(){
@@ -289,11 +290,18 @@ class MainInterfacePanel extends JPanel {
 		model = (DefaultTableModel) table.getModel();
 		model.addColumn("No");
 
-		// ---------------------------------------
+	
 
 	}
 
-	
+	public void setComponentToConstraint(JButton button, GridBagConstraints constraint, int x, int y ){
+		
+		constraint.insets = new Insets(5, 5, 5, 5);
+		constraint.gridx = x;
+		constraint.gridy = y;
+		constraint.gridheight = 1;
+		add(button, constraint);
+	}
 	protected static Integer length;
 	protected static JTable table;
 
