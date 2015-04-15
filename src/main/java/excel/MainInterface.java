@@ -237,13 +237,7 @@ class MainInterfacePanel extends JPanel {
 		add(writeToExcelBtn, writeToExcelBtnGbc);
 		
 		
-		JButton exportExcelBtn = new JButton(Strings.BTN_OPEN_FILE);
-		GridBagConstraints exportExcelBtnGbc = new GridBagConstraints();
-
-		exportExcelBtnGbc.insets = new Insets(0, 0, 0, 5);
-		exportExcelBtnGbc.gridx = 0;
-		exportExcelBtnGbc.gridy = 3;
-		add(exportExcelBtn, exportExcelBtnGbc);
+		
 		
 		
 		writeToExcelBtn.addActionListener(new ActionListener(){
@@ -292,8 +286,13 @@ class MainInterfacePanel extends JPanel {
 
 	}
 
-	public void setComponent(){
+	public void setComponentToConstraint(JButton button, GridBagConstraints constraint, int x, int y ){
 		
+		constraint.insets = new Insets(5, 5, 5, 5);
+		constraint.gridx = x;
+		constraint.gridy = y;
+		constraint.gridheight = 1;
+		add(button, constraint);
 	}
 	protected static Integer length;
 	protected static JTable table;

@@ -7,4 +7,5 @@ public class Strings {
 	protected static String BTN_CREATE_CSV = "Выгрузить в CSV";
 	protected static String BTN_WRITE_TO_EXCEL = "Записать!";
 	protected static String DEFAULT_SETTINGS_FILE ="settings.prop";
+	
 }
